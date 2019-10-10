@@ -1,0 +1,7 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [true, "attribute", "rboResume", "camelCase"],
+    "component-selector": [true, "element", "rbo-resume", "kebab-case"]
+  }
+}
