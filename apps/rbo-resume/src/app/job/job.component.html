@@ -1,0 +1,13 @@
+<mat-card *ngFor="let job of jobs$ | async ">
+  <mat-card-header>
+    <h2>{{job.title}}</h2>
+    <br />
+    <h6>{{job.startDate}} - {{job.endDate || 'current'}}</h6>
+  </mat-card-header>
+  <mat-card-content>
+    {{job.description}}
+  </mat-card-content>
+  <mat-card-actions>
+    <div *ngFor="let technology of job.technologies">{{technology.name}}</div>
+  </mat-card-actions>
+</mat-card>

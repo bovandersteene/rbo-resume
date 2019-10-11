@@ -1,4 +1,4 @@
-import { Education, Job, Summary, Technology } from '../model';
+import { Education, Job, Summary, Technology } from '@rbo-resume/api-interfaces';
 
 export const educations: Education[] = [
   {
@@ -12,7 +12,7 @@ export const educations: Education[] = [
 export const technologies: Technology[] = [
   { id: 1, name: 'Javascript', level: 5 },
   { id: 2, name: 'Angular', level: 4 },
-  { id: 3, name: 'NesJs', level: 3 }
+  { id: 3, name: 'NestJs', level: 3 }
 ];
 
 export const jobs: Job[] = [

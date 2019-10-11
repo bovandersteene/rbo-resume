@@ -3,6 +3,7 @@ import { ApiModelProperty } from '@nestjs/swagger';
 import { IsNotEmpty, IsNumber, Max, Min } from 'class-validator';
 
 export class TechnologyDto implements Technology {
+  readonly id: number;
   @IsNotEmpty()
   @ApiModelProperty({description: 'Name of the technology'})
   readonly name: string;
@@ -15,6 +16,7 @@ export class TechnologyDto implements Technology {
 }
 
 export class TechnologyEntity implements Technology{
+  readonly id: number;
   readonly level: number;
   readonly name: string;
 

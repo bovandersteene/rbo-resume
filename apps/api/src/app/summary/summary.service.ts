@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Summary } from '../model';
+import { Summary } from '@rbo-resume/api-interfaces';
 import { summary } from '../data/demo';
 import { SummaryEntity } from './summary';
 
