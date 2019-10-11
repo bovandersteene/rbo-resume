@@ -22,7 +22,6 @@ async function bootstrap() {
       .setVersion('1.0')
       .setBasePath('api')
       .addTag('resume')
-      .addTag('example')
       .build();
 
     const document = SwaggerModule.createDocument(app, options);
