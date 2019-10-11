@@ -8,9 +8,10 @@ import {
 } from '@nestjs/common';
 import { SummaryDto } from './summary';
 import { SummaryService } from './summary.service';
+import { ROUTES } from '@rbo-resume/api-interfaces';
 
 @UseInterceptors(ClassSerializerInterceptor)
-@Controller('summary')
+@Controller(ROUTES.SUMMARY)
 export class SummaryController {
   constructor(private summaryService: SummaryService) {}
 

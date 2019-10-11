@@ -1,20 +1,27 @@
-import { Body, ClassSerializerInterceptor, Controller, Get, Post, UseInterceptors } from '@nestjs/common';
+import {
+  Body,
+  ClassSerializerInterceptor,
+  Controller,
+  Get,
+  Post,
+  UseInterceptors
+} from '@nestjs/common';
 import { TechnologyService } from './technology.service';
 import { TechnologyDto } from './technology';
+import { ROUTES } from '@rbo-resume/api-interfaces';
 
 @UseInterceptors(ClassSerializerInterceptor)
-@Controller('technology')
+@Controller(ROUTES.TECHNOLOGY)
 export class TechnologyController {
-  constructor(private technologyService: TechnologyService) {
-  }
+  constructor(private technologyService: TechnologyService) {}
 
   @Get()
-  listAll(){
+  listAll() {
     return this.technologyService.getAll();
   }
 
   @Post()
-  addOne(@Body() technology: TechnologyDto){
+  addOne(@Body() technology: TechnologyDto) {
     return this.technologyService.add(technology);
   }
 }

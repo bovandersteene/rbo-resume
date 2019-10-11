@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Technology } from '../model';
+import { Technology } from '@rbo-resume/api-interfaces';
 import { technologies } from '../data/demo';
 import { TechnologyEntity } from './technology';
 
