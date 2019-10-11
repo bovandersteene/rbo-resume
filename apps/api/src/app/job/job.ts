@@ -41,6 +41,7 @@ export class JobEntity implements Job {
   @Transform(date => format(date, 'dd/MM/yyyy'))
   readonly startDate: Date;
   readonly technologies: Technology[];
+  @ApiModelProperty( )
   readonly title: string;
 
   constructor(partial: Partial<JobEntity>) {

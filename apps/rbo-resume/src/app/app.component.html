@@ -1,8 +1,11 @@
-<div style="text-align:center">
-  <h1>Welcome to rbo-resume!</h1>
-  <img
-    width="450"
-    src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png"
-  />
-</div>
-<div>Message: {{ hello$ | async | json }}</div>
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>My resume</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<rbo-resume-summary></rbo-resume-summary>
+<rbo-resume-technology></rbo-resume-technology>
+<rbo-resume-education></rbo-resume-education>
+<rbo-resume-job></rbo-resume-job>
