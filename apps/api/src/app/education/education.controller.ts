@@ -1,7 +1,8 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, ClassSerializerInterceptor, Controller, Get, Post, UseInterceptors } from '@nestjs/common';
 import { EducationService } from './education.service';
 import { EducationDto } from './education';
 
+@UseInterceptors(ClassSerializerInterceptor)
 @Controller('education')
 export class EducationController {
   constructor(private educationService: EducationService) {}

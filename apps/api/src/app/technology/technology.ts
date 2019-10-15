@@ -7,3 +7,13 @@ export class TechnologyDto implements Technology {
   @ApiModelProperty({description: 'Level you own for this technology'})
   readonly level: number;
 }
+
+
+export class TechnologyEntity implements Technology{
+  readonly level: number;
+  readonly name: string;
+
+  constructor(partial: Partial<Technology>) {
+    Object.assign(this, partial);
+  }
+}
