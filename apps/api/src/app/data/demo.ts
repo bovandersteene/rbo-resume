@@ -10,9 +10,9 @@ export const educations: Education[] = [
 ];
 
 export const technologies: Technology[] = [
-  { name: 'Javascript', level: 5 },
-  { name: 'Angular', level: 4 },
-  { name: 'NesJs', level: 3 }
+  { id: 1, name: 'Javascript', level: 5 },
+  { id: 2, name: 'Angular', level: 4 },
+  { id: 3, name: 'NesJs', level: 3 }
 ];
 
 export const jobs: Job[] = [

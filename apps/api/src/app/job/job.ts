@@ -5,7 +5,7 @@ import { Transform } from 'class-transformer';
 import { ArrayNotEmpty, IsBoolean, IsNotEmpty } from 'class-validator';
 import { IsDateCustom } from '../utils/date.validator';
 
-export class JobDTO implements Job {
+export class JobDTO implements Partial<Job>{
   @IsNotEmpty()
   @ApiModelProperty()
   readonly company: string;
@@ -26,7 +26,7 @@ export class JobDTO implements Job {
   @IsNotEmpty()
   @ArrayNotEmpty()
   @ApiModelProperty()
-  readonly technologies: Technology[];
+  readonly technologies: number[];
   @IsNotEmpty()
   @ApiModelProperty()
   readonly title: string;

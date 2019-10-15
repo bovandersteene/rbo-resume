@@ -1,6 +1,7 @@
-import { Body, ClassSerializerInterceptor, Controller, Get, Post, UseInterceptors } from '@nestjs/common';
+import { Body, ClassSerializerInterceptor, Controller, Get, Post, UseInterceptors, UsePipes } from '@nestjs/common';
 import { JobService } from './job.service';
-import { JobDTO } from './job';
+import { JobValidationPipe } from './pipe';
+import { Job } from '../model';
 
 @UseInterceptors(ClassSerializerInterceptor)
 @Controller('job')
@@ -13,7 +14,7 @@ export class JobController {
   }
 
   @Post()
-  addOne(@Body() jobDTO: JobDTO) {
-    return this.jobService.add(jobDTO);
+  addOne(@Body(new JobValidationPipe()) jobDTO: Job) {
+    return this.jobService.add(jobDTO  );
   }
 }
