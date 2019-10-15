@@ -2,20 +2,32 @@ import { ApiModelProperty } from '@nestjs/swagger';
 import { Job, Technology } from '../model';
 import { format } from 'date-fns';
 import { Transform } from 'class-transformer';
+import { ArrayNotEmpty, IsBoolean, IsNotEmpty } from 'class-validator';
+import { IsDateCustom } from '../utils/date.validator';
 
 export class JobDTO implements Job {
+  @IsNotEmpty()
   @ApiModelProperty()
   readonly company: string;
+  @IsNotEmpty()
+  @IsBoolean()
   @ApiModelProperty()
   readonly current: boolean;
+  @IsNotEmpty()
   @ApiModelProperty()
   readonly description: string;
   @ApiModelProperty()
-  readonly endDate: Date;
+  @IsDateCustom('endDate')
+  readonly endDate?: Date;
+  @IsNotEmpty()
+  @IsDateCustom('startDate')
   @ApiModelProperty()
   readonly startDate: Date;
+  @IsNotEmpty()
+  @ArrayNotEmpty()
   @ApiModelProperty()
   readonly technologies: Technology[];
+  @IsNotEmpty()
   @ApiModelProperty()
   readonly title: string;
 }

@@ -42,6 +42,7 @@
     "@nestjs/platform-express": "^6.2.4",
     "@nrwl/angular": "8.6.0",
     "class-transformer": "^0.2.3",
+    "class-validator": "^0.10.2",
     "core-js": "^2.5.4",
     "date-fns": "^2.4.1",
     "fastify-swagger": "^2.4.0",

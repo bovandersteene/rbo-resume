@@ -2,15 +2,19 @@ import { Education } from '../model';
 import { ApiModelProperty } from '@nestjs/swagger';
 import { Transform } from 'class-transformer';
 import { format } from "date-fns";
+import { IsNotEmpty } from 'class-validator';
 
 export class EducationDto implements Education {
   @ApiModelProperty()
+  @IsNotEmpty()
   readonly course: string;
   @ApiModelProperty()
-  readonly endDate: Date;
+  readonly endDate?: Date;
   @ApiModelProperty()
+  @IsNotEmpty()
   readonly school: string;
   @ApiModelProperty()
+  @IsNotEmpty()
   readonly startDate: Date;
 }
 

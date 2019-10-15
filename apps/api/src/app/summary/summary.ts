@@ -1,17 +1,23 @@
 import { Summary } from '../model';
 import { ApiModelProperty } from '@nestjs/swagger';
 import { Exclude } from 'class-transformer';
+import { IsEmail, IsNotEmpty } from 'class-validator';
 
 export class SummaryDto implements Summary {
   @ApiModelProperty()
+  @IsNotEmpty()
   readonly firstName: string;
   @ApiModelProperty()
+  @IsNotEmpty()
   readonly name: string;
   @ApiModelProperty()
+  @IsNotEmpty()
+  @IsEmail()
   readonly email: string;
   @ApiModelProperty()
   readonly imageUrl?: string;
   @ApiModelProperty()
+  @IsNotEmpty()
   readonly description: string;
 }
 

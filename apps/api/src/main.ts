@@ -8,9 +8,12 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app/app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { environment } from './environments/environment';
+import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+
+  app.useGlobalPipes(new ValidationPipe());
 
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);
@@ -28,6 +31,7 @@ async function bootstrap() {
     const document = SwaggerModule.createDocument(app, options);
     SwaggerModule.setup('swagger', app, document);
   }
+
 
   const port = process.env.port || 3333;
   await app.listen(port, () => {
