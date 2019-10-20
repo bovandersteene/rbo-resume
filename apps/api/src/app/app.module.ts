@@ -11,7 +11,8 @@ import { environment } from '../environments/environment';
 import { EducationEntity } from './education/education';
 import { SummaryEntity } from './summary/summary';
 import { TechnologyEntity } from './technology/technology';
-import { JobEntity } from './job/job';
+import { AuthModule } from './auth/auth.module';
+import { UserModule } from './user/user.module';
 
 const typeOrmConfig: TypeOrmModuleOptions = {
   ...environment.db,
@@ -26,7 +27,7 @@ const typeOrmConfig: TypeOrmModuleOptions = {
 };
 
 @Module({
-  imports: [EducationModule, JobModule, TechnologyModule,  SummaryModule, TypeOrmModule.forRoot(typeOrmConfig)],
+  imports: [EducationModule, JobModule, TechnologyModule,  SummaryModule, TypeOrmModule.forRoot(typeOrmConfig), AuthModule, UserModule],
   controllers: [AppController],
   providers: [AppService]
 })

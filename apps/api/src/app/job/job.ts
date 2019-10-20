@@ -51,7 +51,6 @@ export class JobEntity implements Job {
   @Transform(date => format(date, 'dd/MM/yyyy'))
   readonly startDate: Date;
 
-  @ManyToMany()
   @JoinTable({
     nane: 'job_technology',
     joinColumn: 'job_id',

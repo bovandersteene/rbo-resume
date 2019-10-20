@@ -4,4 +4,8 @@ import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 export interface EnvironmentType {
   production: boolean,
   db: Partial<TypeOrmModuleOptions>;
+  jwtConstants: {
+    secret: string,
+    expiresIn: string
+  }
 }

@@ -18,7 +18,6 @@ async function bootstrap() {
 
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);
-
   if (!environment.production) {
     const options = new DocumentBuilder()
       .setTitle('Resume api')
