@@ -6,7 +6,8 @@ import { ROUTES } from '@rbo-resume/api-interfaces';
 @UseInterceptors(ClassSerializerInterceptor)
 @Controller(ROUTES.EDUCATION)
 export class EducationController {
-  constructor(private educationService: EducationService) {}
+  constructor(private educationService: EducationService) {
+  }
 
   @Get()
   listAll() {
@@ -16,4 +17,5 @@ export class EducationController {
   @Post()
   addOne(@Body() educationDto: EducationDto) {
     return this.educationService.add(educationDto);
-  }}
+  }
+}
