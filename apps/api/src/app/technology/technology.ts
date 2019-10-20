@@ -1,4 +1,4 @@
-import { Technology } from '../model';
+import { Technology } from '@rbo-resume/api-interfaces';
 import { ApiModelProperty } from '@nestjs/swagger';
 import { IsNotEmpty, IsNumber, Max, Min } from 'class-validator';
 

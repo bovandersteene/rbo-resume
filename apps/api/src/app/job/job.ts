@@ -1,5 +1,5 @@
 import { ApiModelProperty } from '@nestjs/swagger';
-import { Job, Technology } from '../model';
+import { Job, Technology } from '@rbo-resume/api-interfaces';
 import { format } from 'date-fns';
 import { Transform } from 'class-transformer';
 import { ArrayNotEmpty, IsBoolean, IsNotEmpty } from 'class-validator';

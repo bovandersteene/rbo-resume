@@ -1,4 +1,4 @@
-import { Education } from '../model';
+import { Education } from '@rbo-resume/api-interfaces';
 import { ApiModelProperty } from '@nestjs/swagger';
 import { Transform } from 'class-transformer';
 import { format } from "date-fns";
