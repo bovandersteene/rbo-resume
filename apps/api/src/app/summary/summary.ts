@@ -1,4 +1,4 @@
-import { Summary } from '../model';
+import { Summary } from '@rbo-resume/api-interfaces';
 import { ApiModelProperty } from '@nestjs/swagger';
 import { Exclude } from 'class-transformer';
 import { IsEmail, IsNotEmpty } from 'class-validator';
