@@ -1,9 +1,9 @@
 import { ApiModelProperty } from '@nestjs/swagger';
-import { Job, Technology } from '../model';
 import { format } from 'date-fns';
 import { Transform } from 'class-transformer';
 import { ArrayNotEmpty, IsBoolean, IsNotEmpty } from 'class-validator';
 import { IsDateCustom } from '../utils/date.validator';
+import { Job } from '@rbo-resume/api-interfaces';
 
 export class JobDTO implements Partial<Job>{
   @IsNotEmpty()

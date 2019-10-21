@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, ClassSerializerInterceptor, Controller, Get, Post, UseInterceptors } from '@nestjs/common';
 import { EducationService } from './education.service';
 import { EducationDto } from './education';
 import { ROUTES } from '@rbo-resume/api-interfaces';

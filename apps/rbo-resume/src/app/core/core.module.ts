@@ -1,10 +1,10 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatCardModule, MatInputModule, MatListModule, MatToolbarModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolbarModule } from '@angular/material';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MyInterceptor } from './http.interceptor';
 
-const Material = [ MatCardModule, MatInputModule,MatToolbarModule, MatListModule];
+const Material = [ MatButtonModule, MatCardModule, MatInputModule,MatToolbarModule, MatListModule];
 
 @NgModule({
   declarations: [],

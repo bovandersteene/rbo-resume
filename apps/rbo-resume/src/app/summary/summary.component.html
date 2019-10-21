@@ -1,4 +1,6 @@
     <mat-card *ngIf="summary$ | async as summary">
-      <mat-card-header>{{summary.firstName}} {{summary.name}}</mat-card-header>
+      <mat-card-header>
+        <mat-card-title>{{summary.firstName}} {{summary.name}}</mat-card-title>
+      </mat-card-header>
       <mat-card-content>{{summary.description}}</mat-card-content>
     </mat-card>

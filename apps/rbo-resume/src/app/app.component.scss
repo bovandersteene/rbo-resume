@@ -1,0 +1,13 @@
+.content{
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    margin: 20px;
+  }
+}
+
+rbo-resume-summary, rbo-resume-technology{
+  width: calc(50% - 40px);
+  display: block;
+}

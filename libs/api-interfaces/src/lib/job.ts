@@ -7,5 +7,5 @@ export interface Job {
   readonly description: string;
   readonly startDate: Date;
   readonly endDate?: Date;
-  readonly technologies: Technology[];
+  readonly technologies: Technology[] | number[];
 }

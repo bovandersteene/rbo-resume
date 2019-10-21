@@ -1,8 +1,9 @@
+<mat-toolbar>Education</mat-toolbar>
 <mat-card *ngFor="let education of educations$ | async ">
   <mat-card-header>
-    <h2>{{education.course}}</h2>
+    <mat-card-title>{{education.course}}</mat-card-title>
     <br />
-    <h6>{{education.startDate}} - {{education.endDate || 'current'}}</h6>
+    <mat-card-subtitle>{{education.startDate}} - {{education.endDate }}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
     {{education.school}}
