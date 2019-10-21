@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { Job } from '../model';
 import { jobs } from '../data/demo';
 import { JobEntity } from './job';
+import { Job } from '@rbo-resume/api-interfaces';
 
 @Injectable()
 export class JobService {
