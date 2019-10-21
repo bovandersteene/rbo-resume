@@ -14,5 +14,6 @@ export const environment: EnvironmentType = {
   jwtConstants: {
     secret: 'secretKey',
     expiresIn: '60s'
-  }
+  },
+  fe_path: '../../../dist/apps/rbo-resume',
 };

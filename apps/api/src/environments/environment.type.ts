@@ -7,5 +7,6 @@ export interface EnvironmentType {
   jwtConstants: {
     secret: string,
     expiresIn: string
-  }
+  },
+  fe_path: string
 }

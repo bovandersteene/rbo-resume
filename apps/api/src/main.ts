@@ -10,6 +10,7 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { environment } from './environments/environment';
 import { ValidationPipe } from '@nestjs/common';
 import * as rateLimit from 'express-rate-limit';
+import { AngularMiddleware } from './app/frontend.middleware';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -46,6 +47,8 @@ async function bootstrap() {
       max: 100 // limit each IP to 100 requests per windowMs
     })
   );
+
+  app.use(AngularMiddleware);
 
 
   const port = process.env.port || 3333;
