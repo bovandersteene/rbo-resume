@@ -8,10 +8,18 @@ import { TechnologyModule } from './technology/technology.module';
 import { SummaryModule } from './summary/summary.module';
 import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { environment } from '../environments/environment';
+import { EducationEntity } from './education/education';
+import { SummaryEntity } from './summary/summary';
+import { TechnologyEntity } from './technology/technology';
+import { JobEntity } from './job/job';
 
 const typeOrmConfig: TypeOrmModuleOptions = {
   ...environment.db,
-  entities: [],
+  entities: [
+    EducationEntity,
+    SummaryEntity,
+    TechnologyEntity,
+  ],
   synchronize: false,
   logging: ['error'],
   dropSchema: false,
